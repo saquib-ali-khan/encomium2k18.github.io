@@ -1,14 +1,12 @@
-$(document).ready(function() {                    // code inside $(document).ready(..)  will run only once the DOM is loaded fully. It checks for readiness.
-	timer = setInterval(function(){               // repeats this block with timer time intervals
-		if(count==0){                             // if count == 0, i.e everythin has been uploaded, then fadeOut the "#loader" css styling.
+$(document).ready(function() {
+	timer = setInterval(function(){
+		if(count==0){
 			$("#loader").fadeOut();
-			clearInterval(timer);                 // clear the timer
+			clearInterval(timer);
 			
 			var $root = $('html, body');
-				$('a').click(function() {             //   &(selector).click( func(){..} ) execute the func() if selector is clicked. Here the selector is 
-				                                      // any hyperlink. So clicking on a hyperlink will cause the func() to get executed.
-				
-					var href = $.attr(this, 'href');  // extract the 'href' attribute (i.e the link itself )of above selector on which user clicked.
+				$('a').click(function() {
+					var href = $.attr(this, 'href');
 					$root.animate({
 					scrollTop: $(href).offset().top
 					}, 500, function(){document.location.hash = href;
@@ -87,7 +85,7 @@ function setStellar(){
 var timer;
 var hash;
 var count=8;
-var spreadsheetID = "1PnaPhFPceQnbcz3FPQk8pEyxMwgeXagZyEx2j_n1GLg";
+var spreadsheetID = "1dMlTGOwjQIPBje0cgeVke0kFKiRVUZDH3ghwtFkN6uY";
 var workExp = [];
 var education = [];
 var schAchievements =[];
@@ -101,7 +99,7 @@ var achievements = [];
 
 function loadPORS(){
 	// Make sure it is public or set to Anyone with link can view
-	var url = "https://spreadsheets.google.com/feeds/list/14RB2rzborud5uFy6WkZA2_c2vBl8X0RrIkAQUaRyJYA/6/public/values?alt=json";
+	var url = "https://spreadsheets.google.com/feeds/list/" + spreadsheetID + "/6/public/values?alt=json";
 	
 	var jqxhr = $.getJSON(url);
 	
@@ -127,10 +125,9 @@ function loadPORS(){
 		count--;
 	});	
 }
-
 function loadWorkExp(){	
 	// Make sure it is public or set to Anyone with link can view
-	var url = "https://spreadsheets.google.com/feeds/list/14RB2rzborud5uFy6WkZA2_c2vBl8X0RrIkAQUaRyJYA/5/public/values?alt=json";
+	var url = "https://spreadsheets.google.com/feeds/list/" + spreadsheetID + "/5/public/values?alt=json";
 	
 	var jqxhr = $.getJSON(url);
 	
@@ -139,114 +136,39 @@ function loadWorkExp(){
 		entries = jqxhr.responseJSON.feed.entry;
 		
 		$(entries).each(function(){
-
 			workExp.push(new WorkExperience(this));
-				
 		});
 		
 		ko.applyBindings(workExp, document.getElementById("workExperience"));
 		count--;
-		$('.updateStatus').append('<p>Loaded: Work Experience</p>');
+		$('.updateStatus').append('<p>Loaded: Loaded Work Experience</p>');
 	});
 }
 
 function loadEducation(){	
-	// Make sure it is public or set to Anyone with link can view
-	var url = "https://spreadsheets.google.com/feeds/list/14RB2rzborud5uFy6WkZA2_c2vBl8X0RrIkAQUaRyJYA/1/public/values?alt=json";
-	
-	var jqxhr = $.getJSON(url);
-	
-	// Set another completion function for the request above
-	jqxhr.done(function() {
-		entries = jqxhr.responseJSON.feed.entry;
-		
-		$(entries).each(function(){
-			
-			education.push(new Education(this));
-			
-		});
-		
-		ko.applyBindings(education, document.getElementById("education"));
-		$('.updateStatus').append('<p>Loaded: Education Details</p>');
-		count--;
-	});
+count--;
 }
 
 function loadSchAchievements(){
-	
-	// Make sure it is public or set to Anyone with link can view
-	var url = "https://spreadsheets.google.com/feeds/list/14RB2rzborud5uFy6WkZA2_c2vBl8X0RrIkAQUaRyJYA/3/public/values?alt=json";
-	
-	var jqxhr = $.getJSON(url);
-	
-	// Set another completion function for the request above
-	jqxhr.done(function() {
-		entries = jqxhr.responseJSON.feed.entry;
-		
-		$(entries).each(function(){
-			schAchievements.push(this.gsx$description.$t);
-		});
-		
-		ko.applyBindings(schAchievements, document.getElementById("schAchievements"));
-		$('.info').matchHeight();
-		$('.updateStatus').append('<p>Loaded: Scholastic Achievements</p>');
-		count--;
-	});
+	count--;
 }
 
 function loadCoursework(){
 	
-	// Make sure it is public or set to Anyone with link can view
-	var url = "https://spreadsheets.google.com/feeds/list/14RB2rzborud5uFy6WkZA2_c2vBl8X0RrIkAQUaRyJYA/2/public/values?alt=json";
-	
-	var jqxhr = $.getJSON(url);
-	
-	// Set another completion function for the request above
-	jqxhr.done(function() {
-		entries = jqxhr.responseJSON.feed.entry;
-		
-		$(entries).each(function(){
-			str = '<b>'+this.gsx$subject.$t+'</b>: ';
-			str += this.gsx$courses.$t;
-			coursework.push(str);
-		});
-		
-		ko.applyBindings(coursework, document.getElementById("coursework"));
-		$('.info').matchHeight();
-		$('.updateStatus').append('<p>Loaded: Courework</p>');
-		count--;
-	});
+	count--;
 	
 }
 
 function loadCertifications(){
 	
-	// Make sure it is public or set to Anyone with link can view
-	var url = "https://spreadsheets.google.com/feeds/list/14RB2rzborud5uFy6WkZA2_c2vBl8X0RrIkAQUaRyJYA/4/public/values?alt=json";
-	
-	var jqxhr = $.getJSON(url);
-	
-	// Set another completion function for the request above
-	jqxhr.done(function() {
-		entries = jqxhr.responseJSON.feed.entry;
-		
-		$(entries).each(function(){
-			certifications.push(this.gsx$course.$t);
-		});
-		
-		ko.applyBindings(certifications, document.getElementById("certifications"));
-		$('.info').matchHeight();
-		$('.updateStatus').append('<p>Loaded: Certifications</p>');
-		count--;
-	});
-	
+count--;
 }
 
 
 function loadExtraActivities(){
 	
 	// Make sure it is public or set to Anyone with link can view
-	var url = "https://spreadsheets.google.com/feeds/list/14RB2rzborud5uFy6WkZA2_c2vBl8X0RrIkAQUaRyJYA/7/public/values?alt=json";
+	var url = "https://spreadsheets.google.com/feeds/list/" + spreadsheetID + "/7/public/values?alt=json";
 	var jqxhr = $.getJSON(url);
 	
 	// Set another completion function for the request above
@@ -267,7 +189,7 @@ function loadExtraActivities(){
 function loadExtraAchievements(){
 	
 	// Make sure it is public or set to Anyone with link can view
-	var url = "https://spreadsheets.google.com/feeds/list/14RB2rzborud5uFy6WkZA2_c2vBl8X0RrIkAQUaRyJYA/8/public/values?alt=json";
+	var url = "https://spreadsheets.google.com/feeds/list/" + spreadsheetID + "/8/public/values?alt=json";
 	var jqxhr = $.getJSON(url);
 	
 	// Set another completion function for the request above
@@ -311,29 +233,21 @@ function loadSkills(){
 	
 }
 function WorkExperience(data) {
-	
 	this.type = data.gsx$type.$t;
-
     this.startDate = data.gsx$startdate.$t;
-
 	this.endDate = data.gsx$enddate.$t;
-	
 	this.jobTitle = data.gsx$jobtitle.$t,
-
 	this.company = data.gsx$company.$t;
-
 	this.location = data.gsx$location.$t;
-
 	this.jobDesc= data.gsx$jobdescribtion.$t;
-
 }
 
 function Education(data) {
-	//this.gradDate = data.gsx$graduationdate.$t;
+	this.gradDate = data.gsx$graduationdate.$t;
 	this.gradDegree = data.gsx$graduationdegree.$t,
 	this.stream = data.gsx$stream.$t;
 	this.institution = data.gsx$institution.$t;
-
+	this.score = data.gsx$score.$t;
 }
 
 function initializeCarousel(){
