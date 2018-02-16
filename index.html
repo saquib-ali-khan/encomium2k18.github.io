@@ -99,12 +99,14 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="#aboutMe">About Me</a></li>
-                <li><a href="#academics">Academics</a></li>
+				<li><a href="#workExperience">Events</a></li>
+				<li><a href="#projects">Participate</a></li>
                 <!--<li><a href="#skills">Skills</a></li>-->
-                <li><a href="#workExperience">Work Experience</a></li>
-                <li><a href="#projects">Projects</a></li>
+                <li><a href="sponsors/index.html">Our Sponsors</a></li>
                 <li><a href="#pors">Positions of Responsibilities</a></li>
                 <li><a href="#extraCurriculars">Extra Curriculars</a></li>
+				 <li><a href="#contact">Contact Us</a></li>
+				
             </ul>
         </div>
     </div>
@@ -119,17 +121,21 @@
     padding-bottom: 200px;
 	">
                   <div class="col-md-10 col-md-offset-1 text-center">
-                    <h2 class="font-family-alt font-weight-900 letter-spacing-2 text-white xs-title-extra-large sm-title-extra-large-3 title-extra-large-5" style="font-size:60px; font-color:red;">
+                    <h2 class="font-family-alt font-weight-900 letter-spacing-2 text-white xs-title-extra-large sm-title-extra-large-3 title-extra-large-5" style="font-size:60px; font-color:red; color: white;
+    text-shadow: 2px 2px 4px #000000;">
                       <span class="text-base-color">Welcome to</span><b> ENCOMIUM 2K18</b>
                     </h2>
                     <br>
-                    <h3 class="font-weight-700 letter-spacing-2 text-white xs-title-large sm-title-extra-large title-extra-large-3" style="font-size:50px">
-                      October 16, 2017
+                    <h3 class="font-weight-700 letter-spacing-2 text-white xs-title-large sm-title-extra-large title-extra-large-3" style="font-size:50px ;color: white;
+    text-shadow: 2px 2px 4px #000000;">
+                      March 23-25, 2018
                     </h3>
-                    <p class="font-family-alt text-white sm-title-small title-medium" style="font-size:20px">
+                    <p class="font-family-alt text-white sm-title-small title-medium" style="font-size:20px; color: white;
+    text-shadow: 2px 2px 4px #000000;">
                       <b>at</b>
                     </p>
-                    <h4 class="font-family-alt font-weight-900 letter-spacing-2 text-uppercase text-white xs-title-small sm-title-medium title-extra-large">
+                    <h4 class="font-family-alt font-weight-900 letter-spacing-2 text-uppercase text-white xs-title-small sm-title-medium title-extra-large" style="font-size:20px; color: white;
+    text-shadow: 2px 2px 4px #000000;">
                       <b>Jamia Millia Islamia</b>
                     </h4>
                     <!-- <br>
@@ -194,7 +200,7 @@
     <div style="padding:50px">
         <div class="container" style="background-color:rgba(255, 255, 255, 0.5)">
             <div class="page-header">
-                <h1>Experience</h1>
+                <h1>Events</h1>
             </div>
             <ul class="timeline" data-bind="template: { name: 'workExp-template', foreach: workExp }"></ul>
         </div>
@@ -203,22 +209,22 @@
 
 <div id="projects">
     <div class="page-header">
-        <h1>Projects</h1>
+        <h1>Participate</h1>
     </div>
     <div class="container">
         <div class="row">
             <div class="col-md-4">
                 <div class="bs-callout bs-callout-info">
                     <i class="fa fa-bar-chart fa-3x" aria-hidden="true"></i>
-                    <h4>Machine Learning, Artificial Intelligence</h4>
-                    <h4>Data Science</h4>
+                    <h4>Event Participation</h4>
+                    
                     <h4><a target="_blank" href="https://github.com/saquib-ali-khan"><span class="label label-info">Click Here</span></a></h4>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="bs-callout bs-callout-info">
                     <i class="fa fa-database fa-3x" aria-hidden="true"></i>
-                    <h4>Databases, Development</h4>
+                    <h4>Sponsor Us</h4>
              
                     <h4><a target="_blank" href="https://github.com/saquib-ali-khan"><span class="label label-info">Click Here</span></a></h4>
                 </div>
@@ -226,7 +232,7 @@
             <div class="col-md-4">
                 <div class="bs-callout bs-callout-info">
                     <i class="fa fa-cogs fa-3x" aria-hidden="true"></i>
-                    <h4>Social Network Analysis</h4>
+                    <h4>Volunteer With Us</h4>
                     
                     <h4><a target="_blank" href="https://github.com/saquib-ali-khan/Information-Diffusion-and-node-ranking-in-Social-Networks"><span class="label label-info">Click Here</span></a></h4>
 
@@ -252,15 +258,15 @@
 <div id="extraCurriculars">
     <div class="container-fluid">
         <div class="row">
-            <div class="page-header"><h1>Extra Curriculars</h1></div>
+            <div class="page-header"><h1>Our Volunteers</h1></div>
             <div class="col-md-5 col-md-offset-1" id="activities">
-                <h2>Activities</h2>
+                
                 <ul data-bind="foreach: activities">
                     <li data-bind="html: $data">Loading...</li>
                 </ul>
             </div>
             <div class="col-md-5" id="achievements">
-                <h2>Achievements</h2>
+                
                 <ul data-bind="foreach: achievements">
                     <li data-bind="html: $data">Loading...</li>
                 </ul>
@@ -269,7 +275,7 @@
     </div>
 </div>
 
-<div class="container-fluid" style="background:black; color:white !important;">
+<div id ="contact" class="container-fluid" style="background:black; color:white !important;">
     <div class="row text-center" style="padding-top:10px">
         <div class="col-sm-3 col-xs-6">
             <p><span class="glyphicon glyphicon-earphone"></span> Phone</p>

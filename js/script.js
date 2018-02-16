@@ -123,7 +123,7 @@ function loadPORS(){
 		$('.tile-header').matchHeight();
 		$('.tile-footer').matchHeight();
 		$('.tile').matchHeight();
-		$('.updateStatus').append('<p>Loaded: Positions of Responsibilities</p>');
+		
 		count--;
 	});	
 }
@@ -146,7 +146,7 @@ function loadWorkExp(){
 		
 		ko.applyBindings(workExp, document.getElementById("workExperience"));
 		count--;
-		$('.updateStatus').append('<p>Loaded: Work Experience</p>');
+		
 	});
 }
 
@@ -185,7 +185,7 @@ function loadExtraActivities(){
 		});
 		
 		ko.applyBindings(activities, document.getElementById("activities"));
-		$('.updateStatus').append('<p>Loaded: Extracurricular Activities</p>');
+		
 		count--;
 	});
 	
@@ -206,7 +206,7 @@ function loadExtraAchievements(){
 		});
 		
 		ko.applyBindings(achievements, document.getElementById("achievements"));
-		$('.updateStatus').append('<p>Loaded: Extracurricular Achievements</p>');
+		
 		count--;
 	});
 	
