@@ -211,15 +211,14 @@ body{
 }
 
 #landingPage{
-	
+	background-image:url('../img/slide1_bg.jpg');
 	background-size: cover !important;
 	background-attachment: fixed !important;
 	width:100%;
 	text-align:center;
-	color: black;
-	padding-bottom:-200px;
-	padding-top:-200px;
-
+	color: white;
+	height:100vh;
+	min-height:100%;
 }
 
 #landingPage h1{
@@ -241,7 +240,7 @@ body{
 
 #academics{
 	position:relative;
-	background-image:url('../img/im3.png');
+	background-image:url('../img/slide2_bg.jpg');
 	background-size: cover !important;
 	background-attachment: fixed !important;
 	width:100%;
@@ -286,7 +285,7 @@ body{
 
 #workExperience{
 	position:relative;
-	background-image:url('../img/im2.jpg');
+	background-image:url('../img/slide3_bg.jpg');
 	background-size: cover !important;
 	background-attachment: fixed !important;
 	width:100%;
@@ -326,7 +325,7 @@ body{
 }
 
 #extraCurriculars{
-	background-image:url('img/extra.png');	
+	background-image:url('../img/extra.png');	
 	text-align: center;
 	padding:50px;
 }
@@ -341,25 +340,3 @@ body{
 .text-center{
 	text-align:center !important;
 }
-
-
-#big-video-wrap{
-    display:none;
- 
-}
-#fullscreen_video{
-    display:none
-	margin-top:-200px;
-}
-@media only screen and (min-width:43.913em){
-    #fullscreen_video{
-        display:block;
-        width:100%;
-		vertical-align:top;
-		margin-top:-380px;
-		margin-bottom:-260px;
-		overflow:hidden;
-    }
-}
-
-
