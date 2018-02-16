@@ -353,15 +353,16 @@
 
 <!--#9C6B23-->
 <script id="por-template" type="text/html">
-    <div class="col-md-3">
+    <div class="col-md-3 col-xs-12">
         <div class="tile">
             <div>
                 <div class="tile-footer text-center" style="padding:4px;">
                     <p class="title" data-bind="text: $data.post" style="margin-bottom:5px;"></p>
                     <p data-bind="html: $data.organization"></p>
                 </div>
-                <div class="tile-header"><p data-bind="text: $data.duration"></p>
-                    <p data-bind="html: $data.description"></p></div>
+                <div class="tile-header">
+                    <img width="200px" height="200px"  style="border-radius:15%" data-bind="attr:{src: $data.description}" />
+					</div>
             </div>
         </div>
     </div>
