@@ -151,94 +151,21 @@ function loadWorkExp(){
 }
 
 function loadEducation(){	
-	// Make sure it is public or set to Anyone with link can view
-	var url = "https://spreadsheets.google.com/feeds/list/14RB2rzborud5uFy6WkZA2_c2vBl8X0RrIkAQUaRyJYA/1/public/values?alt=json";
-	
-	var jqxhr = $.getJSON(url);
-	
-	// Set another completion function for the request above
-	jqxhr.done(function() {
-		entries = jqxhr.responseJSON.feed.entry;
-		
-		$(entries).each(function(){
-			
-			education.push(new Education(this));
-			
-		});
-		
-		ko.applyBindings(education, document.getElementById("education"));
-		$('.updateStatus').append('<p>Loaded: Education Details</p>');
-		count--;
-	});
+	count--;
 }
 
 function loadSchAchievements(){
 	
-	// Make sure it is public or set to Anyone with link can view
-	var url = "https://spreadsheets.google.com/feeds/list/14RB2rzborud5uFy6WkZA2_c2vBl8X0RrIkAQUaRyJYA/3/public/values?alt=json";
-	
-	var jqxhr = $.getJSON(url);
-	
-	// Set another completion function for the request above
-	jqxhr.done(function() {
-		entries = jqxhr.responseJSON.feed.entry;
-		
-		$(entries).each(function(){
-			schAchievements.push(this.gsx$description.$t);
-		});
-		
-		ko.applyBindings(schAchievements, document.getElementById("schAchievements"));
-		$('.info').matchHeight();
-		$('.updateStatus').append('<p>Loaded: Scholastic Achievements</p>');
-		count--;
-	});
+	count--;
 }
 
 function loadCoursework(){
-	
-	// Make sure it is public or set to Anyone with link can view
-	var url = "https://spreadsheets.google.com/feeds/list/14RB2rzborud5uFy6WkZA2_c2vBl8X0RrIkAQUaRyJYA/2/public/values?alt=json";
-	
-	var jqxhr = $.getJSON(url);
-	
-	// Set another completion function for the request above
-	jqxhr.done(function() {
-		entries = jqxhr.responseJSON.feed.entry;
-		
-		$(entries).each(function(){
-			str = '<b>'+this.gsx$subject.$t+'</b>: ';
-			str += this.gsx$courses.$t;
-			coursework.push(str);
-		});
-		
-		ko.applyBindings(coursework, document.getElementById("coursework"));
-		$('.info').matchHeight();
-		$('.updateStatus').append('<p>Loaded: Courework</p>');
-		count--;
-	});
-	
+count--;
 }
 
 function loadCertifications(){
 	
-	// Make sure it is public or set to Anyone with link can view
-	var url = "https://spreadsheets.google.com/feeds/list/14RB2rzborud5uFy6WkZA2_c2vBl8X0RrIkAQUaRyJYA/4/public/values?alt=json";
-	
-	var jqxhr = $.getJSON(url);
-	
-	// Set another completion function for the request above
-	jqxhr.done(function() {
-		entries = jqxhr.responseJSON.feed.entry;
-		
-		$(entries).each(function(){
-			certifications.push(this.gsx$course.$t);
-		});
-		
-		ko.applyBindings(certifications, document.getElementById("certifications"));
-		$('.info').matchHeight();
-		$('.updateStatus').append('<p>Loaded: Certifications</p>');
-		count--;
-	});
+count--;
 	
 }
 

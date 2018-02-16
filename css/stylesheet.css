@@ -211,9 +211,10 @@ body{
 }
 
 #landingPage{
-	background-image:url('../img/slide1_bg.jpg');
+	background-image:url('../img/slide1_bg.jpg'),url('../img/im1.jpg');
 	background-size: cover !important;
-	background-attachment: fixed !important;
+	background-attachment: scroll;
+	background-repeat: repeat,repeat;
 	width:100%;
 	text-align:center;
 	color: white;

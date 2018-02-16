@@ -111,9 +111,36 @@
 </nav>
 
 
-<div  id="landingPage">
-    <video autoplay="autoplay" id="fullscreen_video" loop="loop" muted="muted" preload="none" src="https://player.vimeo.com/external/252376941.hd.mp4?s=967f8d072f08769209449a897a6c7c28f9896977&amp;profile_id=174">Texas A&amp;M students walking through Academic Plaza</video>
-</div>
+<div  id="landingPage" >
+
+<div class="row" style="
+    margin-left: -15px;
+    margin-right: -15px; padding-top: 100px;
+    padding-bottom: 200px;
+	">
+                  <div class="col-md-10 col-md-offset-1 text-center">
+                    <h2 class="font-family-alt font-weight-900 letter-spacing-2 text-white xs-title-extra-large sm-title-extra-large-3 title-extra-large-5" style="font-size:70px; font-color:red;">
+                      <span class="text-base-color"><b>Welcome to</b></span><b> ENCOMIUM 2K18</b>
+                    </h2>
+                    <br>
+                    <h3 class="font-weight-700 letter-spacing-2 text-white xs-title-large sm-title-extra-large title-extra-large-3" style="font-size:50px">
+                      October 16, 2017
+                    </h3>
+                    <p class="font-family-alt text-white sm-title-small title-medium" style="font-size:20px">
+                      <b>at</b>
+                    </p>
+                    <h4 class="font-family-alt font-weight-900 letter-spacing-2 text-uppercase text-white xs-title-small sm-title-medium title-extra-large">
+                      <b>Jamia Millia Islamia</b>
+                    </h4>
+                    <!-- <br>
+                    <a href="/register/" class="btn btn-base-color sm-btn-medium btn-large">
+                      Register Now
+                    </a> -->
+                  </div>
+                  <!-- //.col-md-10 -->
+                </div>
+
+	</div>
 
 <div id="aboutMe">
     <div class="container">
@@ -145,31 +172,100 @@
 </div>
 
 <div id="academics">
-    <div class="effect1" style="background-color:rgba(50,50,50,0.2)"></div>
-    <div style="position:relative; padding:50px">
-        <div class="container-fluid">
-            <div class="page-header">
-                <h1><i class="tilt fa fa-graduation-cap"></i> Academics </h1>
-            </div>
-            <div id="education" class="row row-eq-height"
-                 data-bind="template: { name: 'education-template', foreach: education }"></div>
-
-
-            <div class="row row-eq-height">
-                <div id="coursework" class="col-xs-12 col-sm-6 col-lg-4 box"
-                     data-bind="template: {name: 'academics-template', data: {array: coursework,  header: 'Coursework', image: 'fa fa-book'}}">
-                </div>
-                <div id="schAchievements" class="col-xs-12 col-sm-6 col-lg-4 box"
-                     data-bind="template: {name: 'academics-template', data: {array: schAchievements,  header: 'Scholastic Achievements',  image: 'fa fa-trophy'}}">
-                </div>
-                <div id="certifications" class="col-xs-12 col-sm-6 col-lg-4 box"
-                     data-bind="template: {name: 'academics-template', data: {array: certifications,  header: 'Selected Online Courses / Certifications',  image: 'fa fa-book'}}">
-                </div>
-            </div>
-
-
+    <div class="container">
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <h2 class="section-heading text-uppercase">Portfolio</h2>
+            <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+          </div>
         </div>
-    </div>
+        <div class="row">
+          <div class="col-md-4 col-sm-6 portfolio-item">
+            <a class="portfolio-link" data-toggle="modal" href="#portfolioModal1">
+              <div class="portfolio-hover">
+                <div class="portfolio-hover-content">
+                  <i class="fa fa-plus fa-3x"></i>
+                </div>
+              </div>
+              <img class="img-fluid" src="img/portfolio/01-thumbnail.jpg" alt="">
+            </a>
+            <div class="portfolio-caption">
+              <h4>Threads</h4>
+              <p class="text-muted">Illustration</p>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6 portfolio-item">
+            <a class="portfolio-link" data-toggle="modal" href="#portfolioModal2">
+              <div class="portfolio-hover">
+                <div class="portfolio-hover-content">
+                  <i class="fa fa-plus fa-3x"></i>
+                </div>
+              </div>
+              <img class="img-fluid" src="img/portfolio/02-thumbnail.jpg" alt="">
+            </a>
+            <div class="portfolio-caption">
+              <h4>Explore</h4>
+              <p class="text-muted">Graphic Design</p>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6 portfolio-item">
+            <a class="portfolio-link" data-toggle="modal" href="#portfolioModal3">
+              <div class="portfolio-hover">
+                <div class="portfolio-hover-content">
+                  <i class="fa fa-plus fa-3x"></i>
+                </div>
+              </div>
+              <img class="img-fluid" src="img/portfolio/03-thumbnail.jpg" alt="">
+            </a>
+            <div class="portfolio-caption">
+              <h4>Finish</h4>
+              <p class="text-muted">Identity</p>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6 portfolio-item">
+            <a class="portfolio-link" data-toggle="modal" href="#portfolioModal4">
+              <div class="portfolio-hover">
+                <div class="portfolio-hover-content">
+                  <i class="fa fa-plus fa-3x"></i>
+                </div>
+              </div>
+              <img class="img-fluid" src="img/portfolio/04-thumbnail.jpg" alt="">
+            </a>
+            <div class="portfolio-caption">
+              <h4>Lines</h4>
+              <p class="text-muted">Branding</p>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6 portfolio-item">
+            <a class="portfolio-link" data-toggle="modal" href="#portfolioModal5">
+              <div class="portfolio-hover">
+                <div class="portfolio-hover-content">
+                  <i class="fa fa-plus fa-3x"></i>
+                </div>
+              </div>
+              <img class="img-fluid" src="img/portfolio/05-thumbnail.jpg" alt="">
+            </a>
+            <div class="portfolio-caption">
+              <h4>Southwest</h4>
+              <p class="text-muted">Website Design</p>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6 portfolio-item">
+            <a class="portfolio-link" data-toggle="modal" href="#portfolioModal6">
+              <div class="portfolio-hover">
+                <div class="portfolio-hover-content">
+                  <i class="fa fa-plus fa-3x"></i>
+                </div>
+              </div>
+              <img class="img-fluid" src="img/portfolio/06-thumbnail.jpg" alt="">
+            </a>
+            <div class="portfolio-caption">
+              <h4>Window</h4>
+              <p class="text-muted">Photography</p>
+            </div>
+          </div>
+        </div>
+      </div>
 </div>
 
 <!--
