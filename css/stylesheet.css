@@ -295,7 +295,9 @@ body{
 
 #projects{
 	text-align:center;
-	padding-bottom: 20px;
+	padding-top:40px;
+	padding-bottom:55px;
+	background-image:url('../img/im6.jpg');
 }
 
 
@@ -326,7 +328,7 @@ body{
 }
 
 #extraCurriculars{
-	background-image:url('../img/extra.png');	
+	background-image:url('../img/im6.jpg');	
 	text-align: center;
 	padding:50px;
 }
