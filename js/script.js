@@ -101,7 +101,7 @@ var achievements = [];
 
 function loadPORS(){
 	// Make sure it is public or set to Anyone with link can view
-	var url = "https://spreadsheets.google.com/feeds/list/1dMlTGOwjQIPBje0cgeVke0kFKiRVUZDH3ghwtFkN6uY/6/public/values?alt=json";
+	var url = "https://spreadsheets.google.com/feeds/list/1dMlTGOwjQIPBje0cgeVke0kFKiRVUZDH3ghwtFkN6uY/2/public/values?alt=json";
 	
 	var jqxhr = $.getJSON(url);
 	
@@ -130,7 +130,7 @@ function loadPORS(){
 
 function loadWorkExp(){	
 	// Make sure it is public or set to Anyone with link can view
-	var url = "https://spreadsheets.google.com/feeds/list/1dMlTGOwjQIPBje0cgeVke0kFKiRVUZDH3ghwtFkN6uY/5/public/values?alt=json";
+	var url = "https://spreadsheets.google.com/feeds/list/1dMlTGOwjQIPBje0cgeVke0kFKiRVUZDH3ghwtFkN6uY/1/public/values?alt=json";
 	
 	var jqxhr = $.getJSON(url);
 	
@@ -173,7 +173,7 @@ count--;
 function loadExtraActivities(){
 	
 	// Make sure it is public or set to Anyone with link can view
-	var url = "https://spreadsheets.google.com/feeds/list/1dMlTGOwjQIPBje0cgeVke0kFKiRVUZDH3ghwtFkN6uY/7/public/values?alt=json";
+	var url = "https://spreadsheets.google.com/feeds/list/1dMlTGOwjQIPBje0cgeVke0kFKiRVUZDH3ghwtFkN6uY/3/public/values?alt=json";
 	var jqxhr = $.getJSON(url);
 	
 	// Set another completion function for the request above
@@ -194,7 +194,7 @@ function loadExtraActivities(){
 function loadExtraAchievements(){
 	
 	// Make sure it is public or set to Anyone with link can view
-	var url = "https://spreadsheets.google.com/feeds/list/1dMlTGOwjQIPBje0cgeVke0kFKiRVUZDH3ghwtFkN6uY/8/public/values?alt=json";
+	var url = "https://spreadsheets.google.com/feeds/list/1dMlTGOwjQIPBje0cgeVke0kFKiRVUZDH3ghwtFkN6uY/4/public/values?alt=json";
 	var jqxhr = $.getJSON(url);
 	
 	// Set another completion function for the request above
