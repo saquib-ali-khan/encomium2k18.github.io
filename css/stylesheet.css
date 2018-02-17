@@ -215,6 +215,7 @@ body{
 	background-size: cover !important;
 	background-attachment: scroll;
 	background-repeat: repeat,repeat;
+	padding-right: 30px;
 	width:100%;
 	text-align:center;
 	color: white;
