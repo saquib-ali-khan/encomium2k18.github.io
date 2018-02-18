@@ -13,7 +13,7 @@ $(document).ready(function() {                    // code inside $(document).rea
 					scrollTop: $(href).offset().top
 					}, 500, function(){document.location.hash = href;
 					document.location.hash = href;});
-				return false;
+				return false;	
 			});
 			
 			
