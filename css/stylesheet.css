@@ -226,7 +226,7 @@ body{
 }
 
 #landingPage{
-	background:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url('../img/slide1_bg.jpg');
+	background:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url('../img/im9.jpg');
 	background-size: cover !important;
 	background-attachment: scroll;
 	background-repeat: repeat,repeat;
